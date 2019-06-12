@@ -4,10 +4,13 @@ import router from './router'
 import store from './store'
 import './registerServiceWorker'
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
+// @ts-ignore
+import echarts from 'echarts'
+Vue.component('ecahrts',echarts);
 new Vue({
   router,
   store,
   render: h => h(App)
-}).$mount('#app')
+}).$mount('#app');

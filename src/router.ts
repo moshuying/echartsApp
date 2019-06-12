@@ -1,25 +1,48 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: Home
+      path: '',
+      name: '/Home',
+      component:()=> import('./views/ViewHome.vue'),
+      children:[
+        {
+          path:'',
+          name:'/Line',
+          component:()=>import('./views/ViewLine.vue'),
+        },
+        {
+          path:'Bar',
+          name:'/Bar',
+          component:()=>import('./views/ViewBar.vue'),
+        },
+        {
+          path:'Pie',
+          name:'/Pie',
+          component:()=>import('./views/ViewPie.vue'),
+        }
+      ]
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      path:'Rake',
+      name:'/Rake',
+      component:()=>import('./views/ViewRake.vue'),
+    },
+    {
+      path:'News',
+      name:'/News',
+      component:()=>import('./views/ViewNews.vue')
+    },
+    {
+      path:'User',
+      name:'/User',
+      component:()=>import('./views/ViewUser.vue')
     }
   ]
 })
