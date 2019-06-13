@@ -4,6 +4,7 @@
       <router-link to="/Line">折线图</router-link> |
       <router-link to="/Bar">柱状图</router-link> |
       <router-link to="/Pie">饼图</router-link>
+      
     </div>
     <router-view/>
   </div>
