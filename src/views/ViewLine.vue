@@ -1,16 +1,16 @@
 <template>
   <div class="ViewLine">
-    <h1>ViewLine</h1>
-    <Line></Line>
+    <v-Line></v-Line>
+    <h1>Line的视窗</h1>
   </div>
 </template>
 <script lang="ts" >
   import { Component, Vue } from 'vue-property-decorator';
-  import Line from '@/components/Line.vue'
+  import Line from '../components/Line.vue'
 
   @Component({
     components:{
-        Line,
+        'v-Line':Line
       }
   })
   export default class Home extends Vue {}

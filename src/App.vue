@@ -1,15 +1,17 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/Line">折线图</router-link> |
-      <router-link to="/Bar">柱状图</router-link> |
-      <router-link to="/Pie">饼图</router-link>
-      
-    </div>
     <router-view/>
+    <v-footer></v-footer>
   </div>
 </template>
-
+<script>
+  import footer from './components/footer.vue'
+  export default {
+    components:{
+      'v-footer':footer,
+    }
+  }
+</script>
 <style lang="scss">
 body{
   margin: 0;
@@ -17,7 +19,7 @@ body{
   width: 100%;
 }
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'pingfang','Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
