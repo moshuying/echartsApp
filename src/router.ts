@@ -8,29 +8,29 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/Home',
+      path: '/',
       name: '/Home',
       component:()=> import('./views/main/ViewHome.vue'),
       children:[
         {
-          path:'/Home',
+          path:'',
           name:'/Line',
-          component:()=>import('./views/ViewLine.vue'),
+          component:()=>import('./views/charts/ViewLine.vue'),
         },
         {
           path:'/Home/Line',
           name:'/Line',
-          component:()=>import('./views/ViewLine.vue'),
+          component:()=>import('./views/charts/ViewLine.vue'),
         },
         {
           path:'/Home/Bar',
           name:'/Bar',
-          component:()=>import('./views/ViewBar.vue'),
+          component:()=>import('./views/charts/ViewBar.vue'),
         },
         {
           path:'/Home/Pie',
           name:'/Pie',
-          component:()=>import('./views/ViewPie.vue'),
+          component:()=>import('./views/charts/ViewPie.vue'),
         }
       ]
     },

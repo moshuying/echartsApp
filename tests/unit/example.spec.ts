@@ -1,6 +1,6 @@
 import { expect } from 'chai'
 import { shallowMount } from '@vue/test-utils'
-import HelloWorld from '@/components/Bar.vue'
+import HelloWorld from '@/components/charts/Bar.vue'
 
 describe('HelloWorld.vue', () => {
   it('renders props.msg when passed', () => {

@@ -7,7 +7,7 @@
 
 <script lang="ts">
     import { Component, Vue } from 'vue-property-decorator';
-    import Pie from '../components/Pie.vue';
+    import Pie from '../../components/charts/Pie.vue';
 
     @Component({
         components: {

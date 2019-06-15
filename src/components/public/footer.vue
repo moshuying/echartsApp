@@ -5,7 +5,7 @@
 <!--                <svg class="icon" aria-hidden="true">-->
 <!--                    <use xlink:href="#icon-fangda"></use>-->
 <!--                </svg>-->
-                <router-link to="/Home">主页</router-link>
+                <router-link to="/">主页</router-link>
             </li>
             <li><router-link to="/News">新闻</router-link></li>
             <li><router-link to="/Rake">搜索</router-link></li>
@@ -39,10 +39,11 @@ ul{
     display: flex;
     justify-content: space-between;
     list-style-type: none;
-    list-style-image: url("../static/images/图片1.png");
+    list-style-image: url("../../static/images/图片1.png");
     li{
+        background-color: #eeeeee;
         width: 25%;
-        height: 3.5rem;
+        height: 2.5rem;
         font-size: 1.1rem;
         display: flex;
         justify-content: center;

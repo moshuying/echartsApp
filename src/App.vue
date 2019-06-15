@@ -5,7 +5,7 @@
   </div>
 </template>
 <script>
-  import footer from './components/footer.vue'
+  import footer from './components/public/footer.vue'
   export default {
     components:{
       'v-footer':footer,
@@ -17,6 +17,7 @@ body{
   margin: 0;
   padding: 0;
   width: 100%;
+  background: #eeeeee;
 }
 #app {
   font-family: 'pingfang','Avenir', Helvetica, Arial, sans-serif;
