@@ -10,7 +10,7 @@ export default new Router({
     {
       path: '',
       name: '/Home',
-      component:()=> import('./views/ViewHome.vue'),
+      component:()=> import('./views/main/ViewHome.vue'),
       children:[
         {
           path:'',
@@ -32,17 +32,17 @@ export default new Router({
     {
       path:'Rake',
       name:'/Rake',
-      component:()=>import('./views/ViewRake.vue'),
+      component:()=>import('./views/main/ViewRake.vue'),
     },
     {
       path:'News',
       name:'/News',
-      component:()=>import('./views/ViewNews.vue')
+      component:()=>import('./views/main/ViewNews.vue')
     },
     {
       path:'User',
       name:'/User',
-      component:()=>import('./views/ViewUser.vue')
+      component:()=>import('./views/main/ViewUser.vue')
     }
   ]
 })
