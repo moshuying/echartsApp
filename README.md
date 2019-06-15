@@ -37,3 +37,6 @@ npm run test:unit
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### 遇到的第一个难题:路由
+做这个的时候没啥经验,一开始的路由想法错了,就很难受
