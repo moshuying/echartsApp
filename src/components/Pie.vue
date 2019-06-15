@@ -1,6 +1,6 @@
 <template>
     <div class="Line">
-        <p>Line的组件</p>
+        <p>Pie的组件</p>
     </div>
 </template>
 

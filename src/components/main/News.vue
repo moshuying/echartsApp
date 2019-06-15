@@ -1,5 +1,5 @@
 <template>
-    $END$
+    <h1>News的组件</h1>
 </template>
 
 <script>

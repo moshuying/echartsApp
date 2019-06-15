@@ -1,5 +1,5 @@
 <template>
-    $END$
+    <p>User的组件</p>
 </template>
 
 <script>

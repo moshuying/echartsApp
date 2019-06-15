@@ -1,17 +1,17 @@
 <template>
     <div class="home">
-        <HelloWorld msg="Welcome to my Echarts App"/>
-        <h1>test</h1>
+        <h1>搜索窗口</h1>
+        <v-Rake></v-Rake>
     </div>
 </template>
 
 <script lang="ts">
     import { Component, Vue } from 'vue-property-decorator';
-    import HelloWorld from '@/components/Bar.vue'; // @ is an alias to /src
+    import Rake from '../../components/main/Rake.vue'
 
     @Component({
         components: {
-            HelloWorld,
+            'v-Rake':Rake
         },
     })
     export default class Home extends Vue {}

@@ -8,39 +8,44 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '',
+      path: '/Home',
       name: '/Home',
       component:()=> import('./views/main/ViewHome.vue'),
       children:[
         {
-          path:'',
+          path:'/Home',
           name:'/Line',
           component:()=>import('./views/ViewLine.vue'),
         },
         {
-          path:'Bar',
+          path:'/Home/Line',
+          name:'/Line',
+          component:()=>import('./views/ViewLine.vue'),
+        },
+        {
+          path:'/Home/Bar',
           name:'/Bar',
           component:()=>import('./views/ViewBar.vue'),
         },
         {
-          path:'Pie',
+          path:'/Home/Pie',
           name:'/Pie',
           component:()=>import('./views/ViewPie.vue'),
         }
       ]
     },
     {
-      path:'Rake',
+      path:'/Rake',
       name:'/Rake',
       component:()=>import('./views/main/ViewRake.vue'),
     },
     {
-      path:'News',
+      path:'/News',
       name:'/News',
       component:()=>import('./views/main/ViewNews.vue')
     },
     {
-      path:'User',
+      path:'/User',
       name:'/User',
       component:()=>import('./views/main/ViewUser.vue')
     }

@@ -8,7 +8,7 @@
   import footer from './components/footer.vue'
   export default {
     components:{
-      'v-footer':footer
+      'v-footer':footer,
     }
   }
 </script>

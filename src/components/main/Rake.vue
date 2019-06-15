@@ -1,5 +1,5 @@
 <template>
-    $END$
+    <p>搜索组件</p>
 </template>
 
 <script>

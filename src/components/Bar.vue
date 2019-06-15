@@ -1,6 +1,6 @@
 <template>
   <div class="bar">
-    <h1>{{ msg }}</h1>
+    <p>bar的组件</p>
   </div>
 </template>
 

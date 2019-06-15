@@ -1,6 +1,6 @@
 <template>
     <div class="Line">
-        <p>test</p>
+        <p>Line的组件</p>
     </div>
 </template>
 
