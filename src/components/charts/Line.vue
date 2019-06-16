@@ -8,8 +8,6 @@
 
 <script>
     import 'echarts/theme/macarons'
-    import axios from 'axios'
-    import $ from 'jquery'
     export default {
         name: "Line",
         data(){
@@ -170,46 +168,6 @@
                 });
             },
             drawLine3(){
-                let headers={
-                        'Host': 'www.echartsjs.com',
-                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
-                        'Accept': '*/*',
-                        'Accept-Language': 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
-                        'Accept-Encoding': 'gzip, deflate, br',
-                        'Referer': 'https://www.echartsjs.com/examples/editor.html?c=line-aqi',
-                        'X-Requested-With': 'XMLHttpRequest',
-                        'Connection': 'keep-alive',
-                    };
-                let chart3=this.$echarts.init(document.getElementById('chart3'),'macarons');
-                let timer=new Date().getTime().toString();
-                $.get('http://47.107.231.9:81/api/charts/aqi-beijing.json?='+timer,function (data) {
-                          console.log(data);
-                });
-
-
-                // let res = new XMLHttpRequest();
-                // res.open("GET",'https://www.echartsjs.com/examples/data/asset/data/aqi-beijing.json?='+timer);
-                // res.onreadystatechange=function(){
-                //     // alert(res.status);
-                //   if(res.readyState===4){
-                //       let Json = res.responseText || res.response || {};
-                //       console.log(Json);
-                //   }
-                // };
-                // res.send(null);
-
-
-                // axios.get('http://47.107.231.9:81/api/charts/aqi-beijing.json?='+timer, {
-                //     validateStatus: function (status) {
-                //         return status < 500; // 状态码在大于或等于500时才会 reject
-                //     }
-                // })
-                // .then(function (response) {
-                //     alert("1");
-                // })
-                // .catch(function (error) {
-                //     // alert(error.message);
-                // });
             }
         }
     }

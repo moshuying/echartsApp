@@ -6,12 +6,13 @@
 </template>
 
 <script lang="ts">
+
     import { Component, Vue } from 'vue-property-decorator';
-    import header from '../../components/public/v-header.vue';
+    import viewHeader from '../../components/public/v-header.vue';
 
     @Component({
         components: {
-            'v-header':header
+            'v-header':viewHeader
         },
     })
     export default class Home extends Vue {}

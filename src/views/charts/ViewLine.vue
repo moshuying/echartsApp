@@ -5,11 +5,11 @@
 </template>
 <script lang="ts" >
   import { Component, Vue } from 'vue-property-decorator';
-  import Line from '../../components/charts/Line.vue'
+  import VLine from '../../components/charts/Line.vue'
 
   @Component({
     components:{
-        'v-Line':Line
+        'v-Line':VLine
       }
   })
   export default class Home extends Vue {}

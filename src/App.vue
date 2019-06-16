@@ -5,10 +5,10 @@
   </div>
 </template>
 <script>
-  import footer from './components/public/v-footer.vue'
+  import vfooter from './components/public/v-footer.vue'
   export default {
     components:{
-      'v-footer':footer,
+      'v-footer':vfooter,
     }
   }
 </script>
