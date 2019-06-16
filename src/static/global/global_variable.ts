@@ -1,4 +1,4 @@
-const mac = 'macarons';
+const macThem = 'macarons';
 export default {
-    mac,
+    macThem,
 }

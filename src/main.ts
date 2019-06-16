@@ -18,7 +18,6 @@ import $ from 'jquery';
 Vue.prototype.$=$;
 
 //全局变量
-import 'echarts/theme';
 import $Global from '@/static/global/global_variable.ts';
 Vue.prototype.$Global = $Global;
 new Vue({
