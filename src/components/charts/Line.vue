@@ -3,9 +3,9 @@
         <div id="chart1" class="chart"></div>
         <div id="chart2" class="chart"></div>
         <div id="chart3" class="chart"></div>
+        <div id="chart4" class="chart"></div>
     </div>
 </template>
-
 <script>
     import 'echarts/theme/macarons'
     export default {
@@ -19,6 +19,7 @@
             this.drawLine();
             this.drawLine2();
             this.drawLine3();
+            this.drawLine4();
         },
         methods:{
             drawLine(){
@@ -168,14 +169,152 @@
                 });
             },
             drawLine3(){
-            }
+                let chart3 = this.$echarts.init(document.getElementById('chart3'),'macarons');
+                chart3.setOption({
+                    title: {
+                        text: '未来一周气温变化',
+                        subtext: '纯属虚构'
+                    },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    legend: {
+                        data:['最高气温','最低气温']
+                    },
+                    toolbox: {
+                        show: true,
+                        feature: {
+                            dataZoom: {
+                                yAxisIndex: 'none'
+                            },
+                            dataView: {readOnly: false},
+                            magicType: {type: ['line', 'bar']},
+                            restore: {},
+                            saveAsImage: {}
+                        }
+                    },
+                    xAxis:  {
+                        type: 'category',
+                        boundaryGap: false,
+                        data: ['周一','周二','周三','周四','周五','周六','周日']
+                    },
+                    yAxis: {
+                        type: 'value',
+                        axisLabel: {
+                            formatter: '{value} °C'
+                        }
+                    },
+                    series: [
+                        {
+                            name:'最高气温',
+                            type:'line',
+                            data:[11, 11, 15, 13, 12, 13, 10],
+                            markPoint: {
+                                data: [
+                                    {type: 'max', name: '最大值'},
+                                    {type: 'min', name: '最小值'}
+                                ]
+                            },
+                            markLine: {
+                                data: [
+                                    {type: 'average', name: '平均值'}
+                                ]
+                            }
+                        },
+                        {
+                            name:'最低气温',
+                            type:'line',
+                            data:[1, -2, 2, 5, 3, 2, 0],
+                            markPoint: {
+                                data: [
+                                    {name: '周最低', value: -2, xAxis: 1, yAxis: -1.5}
+                                ]
+                            },
+                            markLine: {
+                                data: [
+                                    {type: 'average', name: '平均值'},
+                                    [{
+                                        symbol: 'none',
+                                        x: '90%',
+                                        yAxis: 'max'
+                                    }, {
+                                        symbol: 'circle',
+                                        label: {
+                                            normal: {
+                                                position: 'start',
+                                                formatter: '最大值'
+                                            }
+                                        },
+                                        type: 'max',
+                                        name: '最高点'
+                                    }]
+                                ]
+                            }
+                        }
+                    ]
+                });
+            },
+            drawLine4(){
+                let chart4 = this.$echarts.init(document.getElementById('chart4'),'macarons');
+                chart4.setOption({
+                    title: {
+                        text: 'Step Line'
+                    },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    legend: {
+                        data:['Step Start', 'Step Middle', 'Step End']
+                    },
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    toolbox: {
+                        feature: {
+                            saveAsImage: {}
+                        }
+                    },
+                    xAxis: {
+                        type: 'category',
+                        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+                    },
+                    yAxis: {
+                        type: 'value'
+                    },
+                    series: [
+                        {
+                            name:'Step Start',
+                            type:'line',
+                            step: 'start',
+                            data:[120, 132, 101, 134, 90, 230, 210]
+                        },
+                        {
+                            name:'Step Middle',
+                            type:'line',
+                            step: 'middle',
+                            data:[220, 282, 201, 234, 290, 430, 410]
+                        },
+                        {
+                            name:'Step End',
+                            type:'line',
+                            step: 'end',
+                            data:[450, 432, 401, 454, 590, 530, 510]
+                        }
+                    ]
+                })
+            },
         }
     }
 </script>
-
 <style scoped lang="scss">
-.chart{
-    width: 100%;
-    height: 600px;
+.Line{
+    .chart{
+        width: 90%;
+        height: 600px;
+        margin: 2rem auto;
+    }
 }
 </style>

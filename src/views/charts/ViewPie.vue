@@ -1,7 +1,6 @@
 <template>
     <div class="home">
         <v-Pie></v-Pie>
-        <h1>Pie的视窗</h1>
     </div>
 </template>
 

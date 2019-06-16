@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <h1>Bar的视窗</h1>
     <v-Bar></v-Bar>
   </div>
 </template>
