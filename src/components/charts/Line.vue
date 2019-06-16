@@ -8,6 +8,8 @@
 
 <script>
     import 'echarts/theme/macarons'
+    import axios from 'axios'
+    import $ from 'jquery'
     export default {
         name: "Line",
         data(){
@@ -168,10 +170,7 @@
                 });
             },
             drawLine3(){
-                let chart3=this.$echarts.init(document.getElementById('chart3'),'macarons');
-                let timer=new Date().getTime().toString();
-                this.$axios({
-                    headers:{
+                let headers={
                         'Host': 'www.echartsjs.com',
                         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
                         'Accept': '*/*',
@@ -180,18 +179,37 @@
                         'Referer': 'https://www.echartsjs.com/examples/editor.html?c=line-aqi',
                         'X-Requested-With': 'XMLHttpRequest',
                         'Connection': 'keep-alive',
-                        },
-                        method:"get",
-                        url:"https://www.echartsjs.com/examples/data/asset/data/aqi-beijing.json?="+timer,
-                    })
-                    .then(function (res) {
+                    };
+                let chart3=this.$echarts.init(document.getElementById('chart3'),'macarons');
+                let timer=new Date().getTime().toString();
+                $.get('http://47.107.231.9:81/api/charts/aqi-beijing.json?='+timer,function (data) {
+                          console.log(data);
+                });
 
-                        alert(res.data[0]);
-                    })
-                    .andThen((res) => {
-                      alert()
-                    });
 
+                // let res = new XMLHttpRequest();
+                // res.open("GET",'https://www.echartsjs.com/examples/data/asset/data/aqi-beijing.json?='+timer);
+                // res.onreadystatechange=function(){
+                //     // alert(res.status);
+                //   if(res.readyState===4){
+                //       let Json = res.responseText || res.response || {};
+                //       console.log(Json);
+                //   }
+                // };
+                // res.send(null);
+
+
+                // axios.get('http://47.107.231.9:81/api/charts/aqi-beijing.json?='+timer, {
+                //     validateStatus: function (status) {
+                //         return status < 500; // 状态码在大于或等于500时才会 reject
+                //     }
+                // })
+                // .then(function (response) {
+                //     alert("1");
+                // })
+                // .catch(function (error) {
+                //     // alert(error.message);
+                // });
             }
         }
     }

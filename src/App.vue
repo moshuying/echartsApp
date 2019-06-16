@@ -5,7 +5,7 @@
   </div>
 </template>
 <script>
-  import footer from './components/public/footer.vue'
+  import footer from './components/public/v-footer.vue'
   export default {
     components:{
       'v-footer':footer,

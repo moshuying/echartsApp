@@ -9,12 +9,10 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: '/Home',
       component:()=> import('./views/main/ViewHome.vue'),
       children:[
         {
           path:'',
-          name:'/Line',
           component:()=>import('./views/charts/ViewLine.vue'),
         },
         {
@@ -33,6 +31,11 @@ export default new Router({
           component:()=>import('./views/charts/ViewPie.vue'),
         }
       ]
+    },
+    {
+      path:'/',
+      name:'/Home',
+      component:()=>import('./views/main/ViewHome.vue'),
     },
     {
       path:'/Rake',
