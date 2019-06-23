@@ -10,6 +10,9 @@
             <li>
                 <router-link to="/Home/Pie">Pie</router-link>
             </li>
+            <li>
+                <router-link to="/Home/navMap">navMap</router-link>
+            </li>
         </ul>
     </div>
 </template>
