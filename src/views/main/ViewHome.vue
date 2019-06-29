@@ -6,7 +6,6 @@
 </template>
 
 <script lang="ts">
-
     import { Component, Vue } from 'vue-property-decorator';
     import viewHeader from '../../components/public/v-header.vue';
 
