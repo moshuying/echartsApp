@@ -1,16 +1,16 @@
 <template>
     <div class="home">
-        <v-Pie></v-Pie>
+        <v-gaode></v-gaode>
     </div>
 </template>
 
 <script lang="ts">
     import { Component, Vue } from 'vue-property-decorator';
-    import Pie from '../../components/charts/Pie.vue';
+    import gaode from '../../components/map/gaode.vue'; // @ is an alias to /src
 
     @Component({
         components: {
-           'v-Pie':Pie
+            'v-gaode':gaode
         },
     })
     export default class Home extends Vue {}

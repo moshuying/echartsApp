@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@types/chai": "^4.1.0",
+    "@types/echarts": "^4.1.9",
     "@types/jquery": "^3.3.29",
     "@types/mocha": "^5.2.4",
     "@types/qs": "^6.5.3",
@@ -35,7 +36,7 @@
     "@vue/test-utils": "1.0.0-beta.29",
     "babel-eslint": "^10.0.1",
     "chai": "^4.1.2",
-    "echarts": "latest",
+    "echarts": "^4.2.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "jquery": "latest",
@@ -43,6 +44,7 @@
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
     "typescript": "^3.4.3",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "layui-src": "latest"
   }
 }

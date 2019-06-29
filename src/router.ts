@@ -29,6 +29,11 @@ export default new Router({
           path:'/Home/Pie',
           name:'/Pie',
           component:()=>import('./views/charts/ViewPie.vue'),
+        },
+        {
+          path:'/Home/navMap',
+          name:'/navMap',
+          component:()=>import('./views/map/navMap.vue'),
         }
       ]
     },
