@@ -20,6 +20,9 @@ Vue.prototype.$=$;
 //全局变量
 import $Global from '@/static/global/global_variable.ts';
 Vue.prototype.$Global = $Global;
+
+//引入阿里云图标
+import './static/icon/font_batter/iconfont.css'
 new Vue({
   router,
   store,
