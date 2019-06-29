@@ -3,7 +3,7 @@
         <div class="home-nav">
             <div class="page-type">爬虫</div>
             <div class="page-type">大数据可视化</div>
-            <div class="page-type"></div>
+            <div class="page-type">测试</div>
             <div class="page-type"></div>
         </div>
         <ul style="display: none;">
