@@ -1,25 +1,26 @@
 <template>
-    <div class="header">
+    <div class="v-header">
         <div class="home-nav">
             <div class="page-type">爬虫</div>
-            <div class="page-type">大数据可视化</div>
+            <div class="page-type">大数据可视化
+                <ul style="">
+                    <li>
+                        <router-link to="/Home/Line">Line</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/Home/Bar">Bar</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/Home/Pie">Pie</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/Home/navMap">navMap</router-link>
+                    </li>
+                </ul>
+            </div>
             <div class="page-type">测试</div>
-            <div class="page-type"></div>
+            <div class="page-type">测试</div>
         </div>
-        <ul style="display: none;">
-            <li>
-                <router-link to="/Home/Line">Line</router-link>
-            </li>
-            <li>
-                <router-link to="/Home/Bar">Bar</router-link>
-            </li>
-            <li>
-                <router-link to="/Home/Pie">Pie</router-link>
-            </li>
-            <li>
-                <router-link to="/Home/navMap">navMap</router-link>
-            </li>
-        </ul>
     </div>
 </template>
 <script>
@@ -28,21 +29,29 @@
     }
 </script>
 <style scoped lang="scss">
-    ul{
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 2rem;
-        list-style-type: none;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        li{
-            width: 33.33333333%;
-            border-bottom: 1px solid #555555;
-            a{
-                text-decoration: none;
+@import "../../static/scss/public.scss";
+.v-header{
+    width: 100%;
+    @include Flex();
+    .home-nav{
+        width: 95%;
+        height: 100%;
+        @include Flex(space-between);
+        .page-type{
+            /*overflow: hidden;*/
+            &:hover{
+                ul{
+                    display: block;
+                }
+            }
+            ul{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                list-style-type: none;
+                display: none;
             }
         }
     }
+}
 </style>
