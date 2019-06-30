@@ -23,6 +23,9 @@ Vue.prototype.$Global = $Global;
 
 //引入阿里云图标
 import './static/icon/font_batter/iconfont.css'
+
+//引用公共css样式
+import './static/scss/public.scss'
 new Vue({
   router,
   store,
