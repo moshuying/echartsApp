@@ -51,7 +51,7 @@
                         data: ['周一','周二','周三','周四','周五','周六','周日']
                 },
                 yAxis: {
-                    type: 'value'
+                    type: 'variable.scss'
                 },
                 series: [
                     {
@@ -126,7 +126,7 @@
                         data: date
                     },
                     yAxis: {
-                        type: 'value',
+                        type: 'variable.scss',
                         boundaryGap: [0, '100%']
                     },
                     dataZoom: [{
@@ -201,7 +201,7 @@
                         data: ['周一','周二','周三','周四','周五','周六','周日']
                     },
                     yAxis: {
-                        type: 'value',
+                        type: 'variable.scss',
                         axisLabel: {
                             formatter: '{value} °C'
                         }
@@ -284,7 +284,7 @@
                         data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
                     },
                     yAxis: {
-                        type: 'value'
+                        type: 'variable.scss'
                     },
                     series: [
                         {
@@ -386,13 +386,13 @@
                     yAxis : [
                         {
                             name : '流量(m^3/s)',
-                            type : 'value',
+                            type : 'variable.scss',
                             max : 500
                         },
                         {
                             gridIndex: 1,
                             name : '降雨量(mm)',
-                            type : 'value',
+                            type : 'variable.scss',
                             inverse: true
                         }
                     ],

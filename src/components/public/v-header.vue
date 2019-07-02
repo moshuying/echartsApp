@@ -29,7 +29,7 @@
     }
 </script>
 <style scoped lang="scss">
-@import "../../static/scss/public.scss";
+@import "../../static/scss/mixin.scss";
 .v-header{
     width: 100%;
     @include Flex();
@@ -38,7 +38,6 @@
         height: 100%;
         @include Flex(space-between);
         .page-type{
-            /*overflow: hidden;*/
             &:hover{
                 ul{
                     display: block;
@@ -50,6 +49,19 @@
                 width: 100%;
                 list-style-type: none;
                 display: none;
+                position: absolute;
+                left: 0;
+                li{
+                    background-color: $vue-color;
+                    a{
+                        width: 100%;
+                        text-align: center;
+                    }
+                    &:hover{
+                        background-color: #cccccc;
+                        border-radius: 5px;
+                    }
+                }
             }
         }
     }
