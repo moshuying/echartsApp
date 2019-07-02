@@ -25,7 +25,7 @@ Vue.prototype.$Global = $Global;
 import './static/icon/font_batter/iconfont.css'
 
 //引用公共css样式
-import './static/scss/public.scss'
+import './static/scss/mixin.scss'
 new Vue({
   router,
   store,

@@ -1,51 +1,6 @@
-/*默认背景颜色*/
-$bg-color:#eee;
-//字体颜色
-/*默认字体颜色*/
-$font-color:black;
-//间隙填充颜色
-$fill-color:white;
-/*活动字体颜色，鼠标移上去时，部分提示颜色*/
-$active-color:#38b5fb;
-/*不引人注意的字体颜色*/
-$house-noattr:#ccc;
-$noattr-color:#eee;
-//鼠标移上去的样式，仅限盒子内部为块状元素时使用
-@mixin BoxActiv(){
-  color: $active-color;
-  @include BdLine(bottom,3px,$active-color);
-}
-/*flex盒子：
- * @$jus :     justify-content 主轴对齐方式
- * @$al-items: align-items     交叉轴对齐
- * @$warp:     flex-wrap       换行方式
- * @$direc:    flex-direction  主轴方向
- * @$al-cont:  align-content   行内元素对齐方式
-*/
-@mixin Flex($jus:center,$al-items:center,$wrap:nowarp,$direc:row,$al-cont:flex-start){
-  display: flex;
-  justify-content: $jus;
-  align-items: $al-items;
-  flex-wrap: $wrap;
-  flex-direction: $direc;
-  align-content: $al-cont;
-  flex-shrink:1;
-  flex-basis: auto;
-}
-//border线
-@mixin BdLine($type:bottom,$len:1px,$color:$noattr-color,$mode:solid){
-  //border-$type: $len $mode $color;
-  //css中border只能用border-<方向>的方法去配置边框的方向，scss中也无法使用border-$type的方式直接使用，暂时只能这么写了
-  @if $type==bottom {
-    border-bottom: $len $mode $color;
-}
-  @if $type==left{
-    border-left: $len $mode $color;
-}
-  @if $type==right{
-    border-right: $len $mode $color;
-}
-  @if $type==top{
-    border-top: $len $mode $color;
-}
+@charset "utf-8";
+@import "variable.scss";
+a{
+  text-decoration: none;
+  color:$font-color;
 }

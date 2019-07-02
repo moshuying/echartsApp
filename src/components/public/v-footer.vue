@@ -57,7 +57,7 @@ ul{
     li{
         background-color: #eeeeee;
         width: 25%;
-        height: 2.5rem;
+        height: 2.8rem;
         font-size: 1.5rem;
         display: flex;
         justify-content: center;
@@ -78,6 +78,7 @@ ul{
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
+            padding-top: 0.1rem;
             span{
                 height: 100%;
                 width: 100%;
