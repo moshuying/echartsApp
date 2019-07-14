@@ -1,0 +1,52 @@
+.main{
+    width: 1000px;
+    height: 100%;
+    margin: auto;
+}
+.main .weather{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+.main .weather .logoAndweather{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.main .weather .logoAndweather .weatherinfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main .weather .logoAndweather .weatherinfo div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50px;
+    margin-left: 17px;
+}
+.main .weather  .serchAndAd{
+    width: 345px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main .weather .serchAndAd .serchBox{
+    height: 50px;
+}
+.main .weather .serchAndAd .serchBox input{
+    width: 90px;
+}
+.main .weather .serchAndAd .serchBox select{
+    width: 95px;
+}
+.main .weather .serchAndAd .serchBox .end{
+    display: flex;
+    margin-bottom: 10px;
+}
+.main .weather .serchAndAd .serchBox .allend{
+    display: flex;
+    justify-content: space-between;
+}

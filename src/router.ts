@@ -13,7 +13,7 @@ export default new Router({
       children:[
         {
           path:'',
-          component:()=>import('./views/charts/ViewLine.vue'),
+          component:()=>import('./views/charts/ViewBar.vue'),
         },
         {
           path:'/Home/Line',

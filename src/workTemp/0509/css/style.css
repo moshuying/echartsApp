@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'pingfang';
+    src: url("../font/苹方黑体-细-简.ttf");
+}
+
+body {
+    font-weight: 400;
+    background-color: #DFEBFF;
+    font-family: 'pingfang';
+    font-size: 14px;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    color: #197AC9;
+    width: 90%;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header .next {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .next .checkbox {
+    display: inline;
+    display: flex;
+}
+
+header .next .checkbox select {
+    width: 3rem;
+    display: inline;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    background: url("../images/search_arrow.gif")no-repeat scroll right center transparent;
+}
+
+header .next .time {
+    display: flex;
+    font-weight: 400;
+}
+
+.timeNav {
+    color: #DFEBFF;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #187ABF, #3BCC8A);
+}
+
+.timeNav span {
+    width: 70%;
+}
+
+.infobox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.infobox .line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 4rem;
+    border-bottom: 1px solid #CDDFF7;
+}
+
+.infobox .line .right .passages {
+    color: #2eaba8;
+}
+
+.infobox .line .lineicon {
+    width: 10rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.infobox .line .lineicon .icon {
+    width: 2rem;
+    height: 2rem;
+    background: url("/images/lineicon.svg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start_date_right {
+    display: none;
+}

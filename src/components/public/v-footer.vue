@@ -10,19 +10,19 @@
             <!--新闻-->
             <li><router-link to="/News">
                 <span class="iconfont icon-gongdanqueren  ">
-                    <a href="">新闻</a>
+                    <a href="">app</a>
                 </span>
             </router-link></li>
 <!--            搜索-->
             <li><router-link to="/Rake">
                 <span class="iconfont icon-sousuofangda  ">
-                    <a href="">搜索</a>
+                    <a href="">日历</a>
                 </span>
             </router-link></li>
 <!--            用户-->
             <li><router-link to="/User">
                 <span class="iconfont icon-guangbo  ">
-                    <a href="">我的信息</a>
+                    <a href="">进销</a>
                 </span>
             </router-link></li>
         </ul>

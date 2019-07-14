@@ -1,6 +1,5 @@
 <template>
     <div class="User">
-        <h1>User的视窗</h1>
         <v-User></v-User>
     </div>
 </template>
