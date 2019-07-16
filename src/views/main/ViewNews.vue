@@ -1,6 +1,5 @@
 <template>
     <div class="News">
-        <h1>News的视窗</h1>
         <v-News></v-News>
     </div>
 </template>
